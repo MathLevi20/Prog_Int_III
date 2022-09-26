@@ -9,23 +9,26 @@
 
   const calculateBmi = () => {
     let bmi: number = weight / (height * height);
-    answer = ` seu bmi é ${bmi.toFixed(2)}`;
+    answer = `Seu bmi é ${bmi.toFixed(2)}`;
   };
 </script>
 
 <TailwindCss />
 
 <div
-  class="flex flex-col items-center min-h-screen pt-6 sm:justify-center sm:pt-0 bg-gray-50"
+  class="flex  flex-col items-center min-h-screen pt-6 sm:justify-center sm:pt-0 bg-gray-50"
 >
-  <div class="items-center sm:justify-center ">
-    <div>
-      <a href="/">
-        <h3 class="text-4xl font-bold text-purple-600">BMI</h3>
-      </a>
-    </div>
+  <div class="items-center justify-center ">
+    <a href="/">
+      <h3
+        class="text-center items-center sm:justify-center text-4xl font-bold text-purple-600"
+      >
+        BMI
+      </h3>
+    </a>
+
     <div
-      class="w-full px-6 py-4 mt-6 overflow-hidden bg-white shadow-md sm:max-w-lg sm:rounded-lg grid place-items-center"
+      class="w-full px-10 py-4 mt-6 overflow-hidden bg-white shadow-md sm:max-w-lg sm:rounded-lg grid place-items-center"
     >
       <form class="w-full max-w-sm">
         <div class="md:flex md:items-center mb-6">
@@ -54,7 +57,9 @@
         class="w-full px-10 py-2 tracking-wide text-white transition-colors duration-200 transform bg-purple-700 rounded-md hover:bg-purple-600 focus:outline-none focus:bg-purple-600"
         on:click={calculateBmi}>Calculate</button
       >
-      <p>{answer || ""}</p>
+      <p class="grid px-5 py-5   place-items-center text-purple-600 font-bold">
+        {answer || ""}
+      </p>
     </div>
   </div>
 </div>

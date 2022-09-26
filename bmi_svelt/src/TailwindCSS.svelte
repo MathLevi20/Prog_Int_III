@@ -1,5 +1,5 @@
-﻿<style global>
-    @tailwind utilities;
-    @tailwind components;
+﻿<style global lang="postcss">
     @tailwind base;
+    @tailwind components;
+    @tailwind utilities;
 </style>
